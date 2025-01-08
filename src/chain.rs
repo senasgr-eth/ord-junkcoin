@@ -26,9 +26,9 @@ impl Chain {
   pub(crate) fn default_rpc_port(self) -> u16 {
     match self {
       Self::Mainnet => 9771,
-      Self::Regtest => 19917,
-      Self::Signet => 19917,
-      Self::Testnet => 44555,
+      Self::Regtest => 19771,
+      Self::Signet => 19771,
+      Self::Testnet => 19771,
     }
   }
 
@@ -41,19 +41,19 @@ impl Chain {
 
   pub(crate) fn first_inscription_height(self) -> u32 {
     match self {
-      Self::Mainnet => 140000,
+      Self::Mainnet => 250000,
       Self::Regtest => 0,
       Self::Signet => 0,
-      Self::Testnet => 4250000,
+      Self::Testnet => 0,
     }
   }
 
   pub(crate) fn first_dune_height(self) -> u32 {
     match self {
-      Self::Mainnet => 5084000,
+      Self::Mainnet => 350000,
       Self::Regtest => 0,
       Self::Signet => 0,
-      Self::Testnet => 4250000,
+      Self::Testnet => 0,
     }
   }
 
